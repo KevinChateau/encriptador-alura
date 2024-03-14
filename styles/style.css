@@ -3,11 +3,136 @@
 
 
 body{
-    background-color: #777;
+    background-color: #F3F5FC;  /*#F3F5FC*/
     margin: 0;
 }
 
+.barra-principal{
+
+}
+
 .logo{
-    padding: 3% 0% 10% 0%;
+    padding: 3% 0% 5% 0%;
     display: block;
+}
+
+.icon-exclamation{
+    color: red;
+}
+
+.img-not-found{
+    width: 220px;
+    padding-top: 200px;
+}
+
+.text-tarea{
+    background-color: inherit;
+    color: darkblue;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 1% 5% 3% 15%;
+    border: none;
+    vertical-align: top;
+
+    width: 500px;
+    height: 380px;
+        
+}
+
+.text-tarea:focus{
+    outline: none;
+}
+
+.text-tarea::placeholder{
+    color: darkblue;
+    font-size: 32px;
+}
+
+.buttons{
+    margin-left: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons p{
+    font-size: small;
+    color: rgba(69, 86, 95, 0.7);
+}
+
+.button-blue{
+    background-color: darkblue;
+    color: lightblue;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    margin-right: 2%;
+}
+
+.button-grey{
+    background-color: #D8DFE8;
+    ;
+    color: darkblue;
+    width: 328px;
+    height: 67px;
+    border: 1px solid darkblue;
+    border-radius: 24px;
+}
+
+
+
+.barra-lateral-1{
+    display: none; /*OCULTAR*/
+    background-color: white;
+    width: 300px;
+    height: 700px;
+    border-radius: 32px;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    right: 10%;
+    top: 5%
+}
+
+.barra-lateral-2{
+    /* display: none;  */
+    background-color: white;
+    width: 300px;
+    height: 700px;
+    border-radius: 32px;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    right: 10%;
+    top: 5%
+}
+
+.button-copy{
+    background-color: inherit;
+    color: darkblue;
+    width: 80%;
+    height: 50px;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /*AQUI NOS QUEDAMOS ---------------*/
+}
+
+.bold-text{
+    font-weight: bold;
+    
+    font-size: 20px;
+}
+
+footer{
+    color: rgba(120, 120, 120, 1);
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 2%;
 }

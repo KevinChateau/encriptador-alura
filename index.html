@@ -10,17 +10,42 @@
 
 
     <body>
-        <img class="logo" src="assets/images/Logo.svg" alt="Logo alura">
-        <input type="text" name="" id="" placeholder="Ingrese el texto aquí">
-        <p>Solo letras minúsculas y sin acentos</p>
-        <input type="button" value="Encriptar">
-        <input type="button" value="Desencriptar">
 
-        <div>
-            <img src="assets/images/Muñeco.svg" alt="Imagen de una persona sosteniendo una lupa">
-            <p>Ningún mensaje fue encontrado</p>
+        <div class="barra principal">
+
+            <img class="logo" src="assets/images/Logo.svg" alt="Logo alura">
+
+            <form action="">
+
+                <textarea class="text-tarea" name="textarea" id="Mensaje" cols="70" rows="10" placeholder="Ingrese el texto aquí" required></textarea>
+
+
+                <div class="buttons">
+                    <p> <img class="icon-exclamation" src="assets/images/bi_exclamation-circle-fill.svg" alt=""> Solo letras minúsculas y sin acentos</p>
+
+                    <input class="button-blue" type="button" value="Encriptar">
+                    <input class="button-grey" type="button" value="Desencriptar">
+                </div>
+            </form>
+
+        </div>
+
+
+        <div class="barra-lateral-1">
+            <img class="img-not-found" src="assets/images/Muñeco.svg" alt="Imagen de una persona sosteniendo una lupa">
+            <p class="bold-text">Ningún mensaje fue encontrado</p>
             <p>Ingresa el texto que desees encriptar o desencriptar</p>
         </div>
+
+        <div class="barra-lateral-2">
+            
+            <p class="bold-text">Ningún mensaje fue encontrado</p>
+            <input class="button-copy" type="button" value="Copiar">
+        </div>
+
+        <footer>
+            Creado por Kevin Castillo | 2024
+        </footer>
 
     </body>
 </html>
