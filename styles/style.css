@@ -7,9 +7,6 @@ body{
     margin: 0;
 }
 
-.barra-principal{
-
-}
 
 .logo{
     padding: 3% 0% 5% 0%;
@@ -81,7 +78,7 @@ body{
 
 
 .barra-lateral-1{
-    display: none; /*OCULTAR*/
+    display: initial; 
     background-color: white;
     width: 300px;
     height: 700px;
@@ -96,7 +93,7 @@ body{
 }
 
 .barra-lateral-2{
-    /* display: none;  */
+    display: none; 
     background-color: white;
     width: 300px;
     height: 700px;
@@ -107,7 +104,8 @@ body{
 
     position: absolute;
     right: 10%;
-    top: 5%
+    top: 5%;
+
 }
 
 .button-copy{
@@ -120,13 +118,22 @@ body{
 
     position: absolute;
     bottom: 10px;
-    right: 10px; /*AQUI NOS QUEDAMOS ---------------*/
+    left: 50%; /*Coloca el borde izquierdo del botón en el centro de la caja*/
+    transform: translateX(-50%); /*Mueve el elemento 50% a la izquierda*/
+    
+    
 }
 
 .bold-text{
     font-weight: bold;
     
     font-size: 20px;
+}
+
+.normal-text{
+    font-size: 22px;
+    margin: 8%;
+    text-align: left;
 }
 
 footer{

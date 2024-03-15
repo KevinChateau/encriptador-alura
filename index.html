@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/style.css">
+        <script src="script.js"></script>
         <title>Encriptador Alura</title>
     </head>
 
@@ -23,7 +24,7 @@
                 <div class="buttons">
                     <p> <img class="icon-exclamation" src="assets/images/bi_exclamation-circle-fill.svg" alt=""> Solo letras minúsculas y sin acentos</p>
 
-                    <input class="button-blue" type="button" value="Encriptar">
+                    <input onclick="encriptarbutton();" class="button-blue" type="button" value="Encriptar">
                     <input class="button-grey" type="button" value="Desencriptar">
                 </div>
             </form>
@@ -31,16 +32,18 @@
         </div>
 
 
-        <div class="barra-lateral-1">
+        <div class="barra-lateral-1" id="barra-lateral-1">
             <img class="img-not-found" src="assets/images/Muñeco.svg" alt="Imagen de una persona sosteniendo una lupa">
             <p class="bold-text">Ningún mensaje fue encontrado</p>
             <p>Ingresa el texto que desees encriptar o desencriptar</p>
         </div>
 
-        <div class="barra-lateral-2">
+        <div class="barra-lateral-2" id="barra-lateral-2">
             
-            <p class="bold-text">Ningún mensaje fue encontrado</p>
-            <input class="button-copy" type="button" value="Copiar">
+            <p id="decrypted-text" class="normal-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, libero eveniet eos inventore, rerum saepe cupiditate, expedita quis quod pariatur quidem optio! Sunt fuga commodi fugit molestiae illum in autem.
+            </p>
+            <input onclick="copybutton();" class="button-copy" type="button" value="Copiar">
         </div>
 
         <footer>
