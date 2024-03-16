@@ -32,7 +32,7 @@ body{
     border: none;
     vertical-align: top;
 
-    width: 500px;
+    width: 60%;
     height: 380px;
         
 }
@@ -47,11 +47,11 @@ body{
 }
 
 .buttons{
-    margin-left: 20%;
+    margin-left: 15%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.buttons p{
+.barra-principal p{
     font-size: small;
     color: rgba(69, 86, 95, 0.7);
 }
@@ -63,6 +63,8 @@ body{
     height: 67px;
     border-radius: 24px;
     margin-right: 2%;
+    margin-bottom: 5%;
+
 }
 
 .button-grey{
@@ -73,12 +75,13 @@ body{
     height: 67px;
     border: 1px solid darkblue;
     border-radius: 24px;
+    margin-bottom: 10%;
 }
 
 
 
 .barra-lateral-1{
-    display: initial; 
+    display: block; 
     background-color: white;
     width: 300px;
     height: 700px;
@@ -142,4 +145,32 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-top: 2%;
+}
+
+@media screen and (max-width:1400px) {
+
+    .barra-lateral-1{
+        position: relative;
+        width: 70%;
+        height: 130px;
+
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2%;
+
+        right: 0%;
+    }
+
+    .buttons{
+        /* position: relative; */
+        display: block;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .img-not-found{
+        display: none;
+    }
 }

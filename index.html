@@ -12,23 +12,25 @@
 
     <body>
 
-        <div class="barra principal">
+        <div class="barra-principal">
 
             <img class="logo" src="assets/images/Logo.svg" alt="Logo alura">
 
             <form action="">
 
-                <textarea class="text-tarea" name="textarea" id="Mensaje" cols="70" rows="10" placeholder="Ingrese el texto aquí" required></textarea>
+                <textarea class="text-tarea" name="textarea" id="Mensaje"  placeholder="Ingrese el texto aquí" required></textarea>
 
-
-                <div class="buttons">
-                    <p> <img class="icon-exclamation" src="assets/images/bi_exclamation-circle-fill.svg" alt=""> Solo letras minúsculas y sin acentos</p>
-
-                    <input onclick="encriptarbutton();" class="button-blue" type="button" value="Encriptar">
-                    <input class="button-grey" type="button" value="Desencriptar">
-                </div>
             </form>
 
+            <p> <img class="icon-exclamation" src="assets/images/bi_exclamation-circle-fill.svg" alt=""> Solo letras minúsculas y sin acentos</p>
+
+        </div>
+
+        <div class="buttons">
+            
+
+            <input onclick="encriptarbutton();" class="button-blue" type="button" value="Encriptar">
+            <input onclick="desencriptarbutton();" class="button-grey" type="button" value="Desencriptar">
         </div>
 
 
@@ -38,7 +40,7 @@
             <p>Ingresa el texto que desees encriptar o desencriptar</p>
         </div>
 
-        <div class="barra-lateral-2" id="barra-lateral-2">
+        <div class="barra-lateral-2" id="barra-lateral-2" disabled>
             
             <p id="decrypted-text" class="normal-text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, libero eveniet eos inventore, rerum saepe cupiditate, expedita quis quod pariatur quidem optio! Sunt fuga commodi fugit molestiae illum in autem.

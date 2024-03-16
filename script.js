@@ -5,15 +5,55 @@ function encriptarbutton(){
 
     // Validar que el textbox no esté vacío
     if(textBox.trim() == ""){
-        alert("Campo de texto vacío");
-    } else{
-        // Ocultar la primera barra
-        document.getElementById("barra-lateral-1").style.display = "none";
-        //Mostrar la segunda barra:
-        document.getElementById("barra-lateral-2").style.display = "initial";
+        // alert("Campo de texto vacío");
+        showAndHide("barra-lateral-1","barra-lateral-2");
 
-        
-        document.getElementById("decrypted-text").innerHTML = encrypt(textBox);
+    } else{
+        showAndHide("barra-lateral-2","barra-lateral-1");
+
+        //Colocar el texto encriptado
+        document.getElementById("decrypted-text").textContent  = encrypt(textBox);
+
+        //Limpiar textbox
+        document.querySelector("textarea").value = "";
+    }
+}
+
+
+function copybutton(){
+
+    //Obtener el texto a copiar
+    let copyText = document.getElementById("decrypted-text").textContent;
+    
+    //Guardando al portapapeles
+    navigator.clipboard.writeText(copyText)
+    .then(function() {
+        //alert("Texto copiado al portapapeles");
+    })
+    .catch(function(error) {
+        console.error("Error al copiar el texto: ", error);
+        //alert("Error al copiar el texto. Por favor, intenta nuevamente.");
+    });
+    
+}
+
+function desencriptarbutton(){
+    let textBox = document.querySelector("textarea").value;
+
+    // Validar que el textbox no esté vacío
+    if(textBox.trim() == ""){
+        //alert("Campo de texto vacío");
+        showAndHide("barra-lateral-1","barra-lateral-2");
+
+    } else{
+
+        showAndHide("barra-lateral-2","barra-lateral-1");
+
+        //Mostrar el texto desencriptado
+        document.getElementById("decrypted-text").textContent  = decrypt(textBox);
+
+        //Limpiar textbox
+        document.querySelector("textarea").value = "";
     }
 }
 
@@ -27,21 +67,21 @@ function encrypt(texto){
     return encryptedText;
 }
 
-function copybutton(){
-    //AQUI NOS QUEDAMOSSSS
-    let copyText = document.getElementById("decrypted-text").value;
-    let textBox = document.querySelector("textarea").value;
+function decrypt(texto){
+    //Forma fácil
+    let encryptedText = texto.replace(/enter/g, "e");
+    encryptedText = encryptedText.replace(/imes/g, "i");
+    encryptedText = encryptedText.replace(/ai/g, "a");
+    encryptedText = encryptedText.replace(/ober/g, "o");
+    encryptedText = encryptedText.replace(/ufat/g, "u");
+    return encryptedText;
+}
 
-    console.log(copyText);
-    console.log(textBox);
-    
-    navigator.clipboard.writeText(copyText)
-    .then(function() {
-        alert("Texto copiado al portapapeles");
-    })
-    .catch(function(error) {
-        console.error("Error al copiar el texto: ", error);
-        alert("Error al copiar el texto. Por favor, intenta nuevamente.");
-    });
+function showAndHide(showElement, hideElement){
+    //Mostrar la segunda barra:
+    document.getElementById(`${showElement}`).style.display = "block";
+
+    // Ocultar la primera barra
+    document.getElementById(`${hideElement}`).style.display = "none";
     
 }
