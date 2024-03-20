@@ -85,3 +85,22 @@ function showAndHide(showElement, hideElement){
     document.getElementById(`${hideElement}`).style.display = "none";
     
 }
+
+
+
+//   function ajustarAltura() {
+//     var windowHeight = window.innerHeight; // Obtiene la altura total de la pantalla del dispositivo
+//     var textarea = document.getElementById("text-tarea");
+//     var porcentajeAltura = 40; // Porcentaje deseado del alto total de la pantalla del dispositivo
+//     textarea.style.height = (windowHeight * porcentajeAltura / 100) + "px"; // Calcula la altura del textarea en base al porcentaje y la establece
+//   }
+  
+//   // Ajusta la altura del textarea al cargar la página
+//   window.onload = function() {
+//     ajustarAltura();
+//   };
+  
+//   // Ajusta la altura del textarea al cambiar el tamaño de la ventana
+//   window.onresize = function() {
+//     ajustarAltura();
+//   };
