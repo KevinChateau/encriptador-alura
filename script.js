@@ -1,7 +1,7 @@
 
 
 function encriptarbutton(){
-    let textBox = document.querySelector("textarea").value;
+    let textBox = document.querySelector("textarea").value.toLowerCase();
 
     // Validar que el textbox no esté vacío
     if(textBox.trim() == ""){
